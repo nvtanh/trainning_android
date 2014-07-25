@@ -1,8 +1,30 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.training.MainActivity"
-    tools:ignore="MergeRootFrame" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_absolutelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Absolute Layout" />
+  
+  <Button
+      android:id="@+id/btn_framelayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Frame Layout" />
+  
+  <Button
+      android:id="@+id/btn_relativelayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Relative Layout" />
+  
+  <Button android:id="@+id/btn_tablelayout"
+    android:text="Table layout"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"/>
+  
+</LinearLayout>
 
