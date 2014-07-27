@@ -7,22 +7,22 @@
         android:id="@+id/btn_absolutelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Absolute Layout" />
+        android:text="@string/label_abso_layout" />
   
   <Button
       android:id="@+id/btn_framelayout"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Frame Layout" />
+      android:text="@string/label_frame_layout" />
   
   <Button
       android:id="@+id/btn_relativelayout"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Relative Layout" />
+      android:text="@string/label_relative_layout" />
   
   <Button android:id="@+id/btn_tablelayout"
-    android:text="Table layout"
+    android:text="@string/label_table_layout"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"/>
   

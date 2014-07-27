@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
@@ -17,6 +18,35 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        Button btn_abso = (Button) findViewById(R.id.btn_absolutelayout);
+        Button btn_frame = (Button) findViewById(R.id.btn_framelayout);
+        Button btn_relative = (Button) findViewById(R.id.btn_relativelayout);
+        Button btn_table = (Button) findViewById(R.id.btn_tablelayout);
+        
+        btn_abso.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+              setContentView(R.layout.absole_layout);
+            }
+        });
+        
+        btn_frame.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+              setContentView(R.layout.frame_layout);
+            }
+        });
+        
+        btn_relative.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	setContentView(R.layout.relative_layout);
+            }
+        });
+        
+        btn_table.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	setContentView(R.layout.table_layout);
+            }
+        });
     }
 
 
