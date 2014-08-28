@@ -81,6 +81,10 @@ thông báo lỗi. Cơ chế gửi và khởi chạy Activity sử dụng thông
 
 **Bước 2:**
 Tạo giao diện cho Activity số 1: activity_main.xml
+Bao gồm:
+- 2 "EditText" để nhập _ID_ và _Password_ cùng với 2 "TextView" tương ứng để hiển thị label cho chúng
+- 1 "Button" để submit và chuyển sang Activity số 2
+
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
@@ -125,6 +129,7 @@ Tạo giao diện cho Activity số 1: activity_main.xml
 
 **Bước 3:**
 Tạo giao diện cho Activity số 2: home.xml
+Chỉ có một TextView" để hiển thị thông báo khi người dùng nhập đúng hoặc sai _ID_ hoặc _Password_
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -144,6 +149,8 @@ Tạo giao diện cho Activity số 2: home.xml
 
 **Bước 4:**
 Tạo controller cho Activity main: MainActivity.java với nội dung như sau:
+Trong controller này ta sẽ tạo một Intent để chuyển thông tin của "ID" và "Password" nhập vào.
+Sau đó sử dụng một biến BUndle để đóng gói thông tin đó trong Intent để chuyển sang Activity số 2(Home).
 
 ```java
 package com.trananh.example;
@@ -199,6 +206,9 @@ public class MainActivity extends Activity {
 
 **Bước 5:**
 Tạo controller cho Activity main: Home.java với nội dung như sau:
+Trong controller này chúng ta đơn giản chỉ là bắt thông tin Intent của MainActivity truyền sang.
+Sau đó dùng, dữ liệu này để kiểm tra xem _ID_ và _Password_ nhập vào đã đúng chưa, sau đó hiện ra
+thông báo tương ứng.
 
 ```java
 package com.trananh.example;
@@ -230,7 +240,7 @@ public class Home extends Activity {
 ```
 
 **Bước 6:** 
-  Bổ sung thêm thông tin về component mới vào AndroidManifest.xml như sau:
+  Bổ sung thêm thông tin về component mới "Home" Activity vào AndroidManifest.xml như sau:
   
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
