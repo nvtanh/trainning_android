@@ -15,7 +15,7 @@ Truy vấn lấy ra các dữ liệu trong bảng
 
 ### Tạo và cập nhật cơ sở dữ liệu
     Tạo một lớp, lớp này sử dụng phương thức _super()_ của lớp kế thừa _SQLiteOpenHelper_ để tạo ra 
-  một cơ sở dữ liệu, với database name() và phiên bản hiện tại của cơ sở dữ liệu.
+  một cơ sở dữ liệu, với database name và phiên bản hiện tại của cơ sở dữ liệu.
   ```java
   super(context, DATABASE_NAME, null, DATABASE_VERSION);
   ```
@@ -24,22 +24,22 @@ Truy vấn lấy ra các dữ liệu trong bảng
     chưa được tạo ra.
     -**onUpgrade():** được gọi, nếu phiên bản database được làm mới trong ứng dụng của bạn.
     Phương thức này cho phép cập nhật một lược đồ cơ sở dữ liệu đã tồn tại hoặc drop một 
-    cơ sở dữ liệu và tạo lại nó thông qua phương thức _onCreate()_
-      Cả 2 phương thức trên đều nhận một đối tượng _SQLiteDatabase_ như một tham số đại diện 
+    cơ sở dữ liệu và tạo lại nó thông qua phương thức `onCreate()`
+      Cả 2 phương thức trên đều nhận một đối tượng `SQLiteDatabase` như một tham số đại diện 
     của cơ sở dữ liệu.
-      _SQLiteOpenHelper_ cung cấp 2 phương thức là _getReadableDatabase()_ và _getWriteableDatabase_
-    để truy cập vào đối tượng _SQLiteDatabase_ trong chế độ đọc hoặc ghi.
+      `SQLiteOpenHelper` cung cấp 2 phương thức là `getReadableDatabase()` và `getWriteableDatabase`
+    để truy cập vào đối tượng `SQLiteDatabase` trong chế độ đọc hoặc ghi.
 
 ### SQLiteDatabase
-    _SQLiteDatabase_ là lớp cơ sở để làm việc với một cơ sở dữ liệu SQLite trong Android và cung cấp 
-  các phương thức _open_, _query_, _update_ và _close_ cơ sở dữ liệu.
-    Cụ thể hơn, _SQLiteDatabase_ cung cấp các phương thức _insert()_, _update()_ và _delete()_
-    Ngoài ra còn có phương thức _execSQL()_ cho phép thực thi các câu lệnh SQL.
-    Doi tượng _ContentValue_ cho phép định nghĩa một cặp key/values. Trong đó, chúng ta dùng 
-  _key_ để thể hiện tên cột trong bảng cơ sở dữ liệu và _value_ thể hiện nội dung trong cột đó của
-  một bản ghi. _ContentValue_ có thể được sử dụng để inserts và updates cho nội dung của database.
-    Chúng ta có thể tạo các truy vẫn thông qua phương thức _rawQuery()_ và _query()_ hoặc qua
-  class _SQLiteQueryBuilder_.
+    `SQLiteDatabase` là lớp cơ sở để làm việc với một cơ sở dữ liệu SQLite trong Android và cung cấp 
+  các phương thức `open`, `query`, `update` và `close` cơ sở dữ liệu.
+    Cụ thể hơn, `SQLiteDatabase` cung cấp các phương thức `insert()`, `update()` và `delete()`
+    Ngoài ra còn có phương thức `execSQL()` cho phép thực thi các câu lệnh SQL.
+    Doi tượng `ContentValue` cho phép định nghĩa một cặp key/values. Trong đó, chúng ta dùng 
+  `key` để thể hiện tên cột trong bảng cơ sở dữ liệu và `value` thể hiện nội dung trong cột đó của
+  một bản ghi. `ContentValue` có thể được sử dụng để inserts và updates cho nội dung của database.
+    Chúng ta có thể tạo các truy vẫn thông qua phương thức `rawQuery()` và `query()` hoặc qua
+  class `SQLiteQueryBuilder`.
   - _rawQuery()_ trực tiếp nhận một câu truy SQL select như một đầu vào
     ```java
       Cursor cursor = getReadableDatabase().
@@ -52,8 +52,18 @@ Truy vấn lấy ra các dữ liệu trong bảng
         null, null, null, null, null);
     ```
   - _SQLiteQueryBuilder_ là một lớp hỗ trợ để chúng ta xây dựng các truy vấn SQL
+  
+  |**Tham số**| **Mô tả** |
+  |:--------:|:--------|
+  |String dbName| Tên bảng để biên dịch |
+  |String columnNames| Một danh sách các cột của bảng để trả về|
+  |||
+  |||
+  |||
+  |||
+  |||
 
-  Để thực hiện các thao tác trên ta đi vào một ví dụ đơn giản: tạo cơ sở dữ liệu với bảng **”Story”** bao gồm các thuộc tính _id_, _category_, _title_ và _content_. Sau đó chúng ta sẽ thực hiện các thao tác đối với sơ cở dữ liệu này như thêm, sửa, xoá, truy vấn, đóng cơ sở dữ liệu.
+  Để thực hiện các thao tác trên ta đi vào một ví dụ đơn giản: tạo cơ sở dữ liệu với bảng **”Story”** bao gồm các thuộc tính `id`, `category`, `title` và `content`. Sau đó chúng ta sẽ thực hiện các thao tác đối với sơ cở dữ liệu này như thêm, sửa, xoá, truy vấn, đóng cơ sở dữ liệu.
 
 **Bước 1:**
   Khởi tạo project:   
