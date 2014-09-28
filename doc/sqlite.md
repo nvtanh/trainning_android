@@ -80,8 +80,9 @@ Truy vấn lấy ra các dữ liệu trong bảng
 - Application Name: "DemoSQLite"
 - Project Name: "DemoSQLite"
 - Packetname: "com.trananh.example"
-- Activity số 1: MainActivity
-- Activity số 2: Home
+ Folder project như sau:
+![folder](https://github.com/nvtanh/trainning_android/blob/master/doc/Folder_SQLite.PNG)
+
 
 **Bước 2:**
   Tạo model `Status` với file name `status.java`
@@ -355,4 +356,9 @@ public class MainActivity extends ListActivity  {
 	  }
 }
 ```
+
+### Kết quả
+Chương trình hiển thị danh sách các status, và 1 button add, 1 button delete.
+Khi ấn button add thì random tạo ra một status, và ấn nút delete thì sẽ xoá đi bản ghi đầu tiên.
+![result](https://github.com/nvtanh/trainning_android/blob/master/doc/main_SQLite.PNG)
  
