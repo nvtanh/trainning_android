@@ -80,6 +80,9 @@ Truy vấn lấy ra các dữ liệu trong bảng
 - Application Name: "DemoSQLite"
 - Project Name: "DemoSQLite"
 - Packetname: "com.trananh.example"
+
+
+
  Folder project như sau:
 ![folder](https://github.com/nvtanh/trainning_android/blob/master/doc/Folder_SQLite.PNG)
 
