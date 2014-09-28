@@ -83,7 +83,7 @@ Truy vấn lấy ra các dữ liệu trong bảng
 
 
 
- Folder project như sau:
+
 ![folder](https://github.com/nvtanh/trainning_android/blob/master/doc/Folder_SQLite.PNG)
 
 
